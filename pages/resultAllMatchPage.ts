@@ -8,5 +8,4 @@ export class ResultAllMatch extends BasePage {
         super(page);
         this.getAllInfoAboutPreviousMatch = page.locator("//div[@class='results-hero__content']")
     }
-
 }

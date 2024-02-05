@@ -8,7 +8,6 @@ export class Login extends BasePage {
     readonly getContinueBtn: Locator;
     readonly getEmailInput: Locator;
 
-
     constructor(page: Page) {
         super(page);
         this.getLoginByGoogle = page.locator("//span[contains(text(),'Google')]")

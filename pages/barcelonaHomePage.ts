@@ -2,7 +2,6 @@ import { expect, type Locator, type Page } from '@playwright/test';
 import { BasePage } from './basePage';
 
 export class HomePageBatcelona extends BasePage {
-    readonly getStartedLink: Locator;
     readonly getFCBarcaLogo: Locator;
     readonly getLoginBtn: Locator;
     readonly getRegisterBtn: Locator;
@@ -20,6 +19,12 @@ export class HomePageBatcelona extends BasePage {
     readonly getClubDropDown: Locator;
     readonly getKidsFromClubDropDown: Locator;
     readonly getHistoryFromClubDropDown: Locator;
+    readonly getLinkToFacebook: Locator;
+    readonly getLinkToTwitter: Locator;
+    readonly getLinkToYouTube: Locator;
+    readonly getLinkToInstagram: Locator;
+    readonly getLinkToTikTok: Locator;
+    readonly getLinkToSpotify: Locator;
 
     constructor(page: Page) {
         super(page);
@@ -40,6 +45,12 @@ export class HomePageBatcelona extends BasePage {
         this.getHistoryFromClubDropDown = page.locator("//div[@data-menu-origin-type='Club']//a[@data-analytics-event='història']");
         this.getResultsFromFirstTeamDropDown = page.locator("//div[@data-menu-origin-type='First Team']//a[@data-analytics-event='resultats']");
         this.getPlayersFromFirstTeamDropDown = page.locator("//div[@data-menu-origin-type='First Team']//a[@data-analytics-event='jugadors']");
+        this.getLinkToFacebook = page.locator("//a[@data-analytics-event='facebook-follow']");
+        this.getLinkToTwitter = page.locator("//a[@data-analytics-event='twitter-follow']");
+        this.getLinkToYouTube = page.locator("//a[@data-analytics-event='youtube-follow']");
+        this.getLinkToInstagram = page.locator("//a[@data-analytics-event='instagram-follow']");
+        this.getLinkToTikTok = page.locator("//a[@data-analytics-event='tiktok-follow']");
+        this.getLinkToSpotify = page.locator("//a[@data-analytics-event='Spotify']");
     }
 
     async goToFCB() {

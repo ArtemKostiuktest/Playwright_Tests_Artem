@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node homework.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.41.1",
-    "@types/node": "^20.11.11"
+    "@types/node": "^20.11.11",
+    "axios": "^0.24.0"
   }
 }
