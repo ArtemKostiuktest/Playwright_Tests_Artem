@@ -1,16 +1,6 @@
-import { test, expect } from '@playwright/test';
-import { HomePageBatcelona } from '../pages/barcelonaHomePage';
-import { SearchResult } from '../pages/searchResultPage';
-import { TicketsFootball } from '../pages/TicketsFootballPage';
-import { ResultAllMatch } from '../pages/ResultAllMatchPage';
-import { FirstTeamPlayers } from '../pages/firstTeamPlayersPage';
-import { Login } from '../pages/loginPage';
-import { Kisds } from '../pages/kidsPage';
-import { History } from '../pages/historyPage';
+import { expect, test } from '../fixture/fixture';
 
-test('check logo, login and registration', async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-
+test('check logo, login and registration', async ({ homepageBarcelona }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -20,10 +10,7 @@ test('check logo, login and registration', async ({ page }) => {
   await expect(homepageBarcelona.getRightInformLogo).toBeVisible;
 });
 
-test('search fild', async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-  let searchResult = new SearchResult(page);
-
+test('search fild', async ({ homepageBarcelona, searchResult }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -35,9 +22,7 @@ test('search fild', async ({ page }) => {
   await expect(searchResult.getFelterNewsButtons).toBeVisible;
 });
 
-test('check enable premium membership', async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-
+test('check enable premium membership', async ({ homepageBarcelona }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -49,10 +34,7 @@ test('check enable premium membership', async ({ page }) => {
   await expect(homepageBarcelona.getPremiumPlan).toBeVisible;
 });
 
-test('check enable information about next match', async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-  let ticketsFootball = new TicketsFootball(page);
-
+test('check enable information about next match', async ({ homepageBarcelona, ticketsFootball }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -64,10 +46,7 @@ test('check enable information about next match', async ({ page }) => {
   await expect(ticketsFootball.getDateMatch).toBeVisible;
 });
 
-test('check information about previous match', async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-  let resultAllMatch = new ResultAllMatch(page)
-
+test('check information about previous match', async ({ homepageBarcelona, resultAllMatch }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -78,10 +57,7 @@ test('check information about previous match', async ({ page }) => {
   await expect(resultAllMatch.getAllInfoAboutPreviousMatch).toBeVisible;
 });
 
-test('check information about players', async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-  let firstTeamPlayers = new FirstTeamPlayers(page);
-
+test('check information about players', async ({ homepageBarcelona, firstTeamPlayers }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -93,10 +69,7 @@ test('check information about players', async ({ page }) => {
   await expect(firstTeamPlayers.getListPlayers).toBeVisible;
 });
 
-test("check content in login page", async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-  let loginPage = new Login(page);
-
+test("check content in login page", async ({ homepageBarcelona, loginPage }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -110,10 +83,7 @@ test("check content in login page", async ({ page }) => {
   await expect(loginPage.getLoginByApple).toBeVisible;
 })
 
-test("check content in kids page", async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-  let kidsPage = new Kisds(page);
-
+test("check content in kids page", async ({ homepageBarcelona, kidsPage }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -125,10 +95,7 @@ test("check content in kids page", async ({ page }) => {
   await expect(kidsPage.getAllContent).toBeVisible;
 })
 
-test("check content in history page", async ({ page }) => {
-  let homepageBarcelona = new HomePageBatcelona(page);
-  let historyPage = new History(page);
-
+test("check content in history page", async ({ homepageBarcelona, historyPage }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
@@ -139,4 +106,16 @@ test("check content in history page", async ({ page }) => {
   await expect(historyPage.getTitle).toBeVisible;
   await expect(historyPage.getNavListOfHistory).toBeVisible;
   await expect(historyPage.getAllHistoricalArticls).toBeVisible;
+})
+
+test("check social media buttons", async ({ homepageBarcelona }) => {
+  await homepageBarcelona.goToFCB();
+  await homepageBarcelona.clickToCookies();
+
+  await expect(homepageBarcelona.getLinkToFacebook).toBeVisible;
+  await expect(homepageBarcelona.getLinkToTwitter).toBeVisible;
+  await expect(homepageBarcelona.getLinkToYouTube).toBeVisible;
+  await expect(homepageBarcelona.getLinkToInstagram).toBeVisible;
+  await expect(homepageBarcelona.getLinkToTikTok).toBeVisible;
+  await expect(homepageBarcelona.getLinkToSpotify).toBeVisible;
 })
