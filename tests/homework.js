@@ -53,5 +53,5 @@ let person = {
 
 let audi = new Cars("Audi", "A4", 2012, "Universal", "Petrol", person)
 
-// console.log(person)
-// console.log(audi)
+console.log(person)
+console.log(audi)
