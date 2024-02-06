@@ -15,7 +15,7 @@ test('search fild', async ({ homepageBarcelona, searchResult }) => {
   await homepageBarcelona.clickToCookies();
 
   await homepageBarcelona.getSearchIcon.click
-  await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
   await homepageBarcelona.SearchNews("Pedri");
 
   await expect(searchResult.getResultListNews).toBeVisible;
@@ -26,7 +26,7 @@ test('check enable premium membership', async ({ homepageBarcelona }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
-  await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
   await homepageBarcelona.getCulersDropDown.click();
   await homepageBarcelona.getPremiumFromCulersDropDown.click();
 
@@ -38,7 +38,7 @@ test('check enable information about next match', async ({ homepageBarcelona, ti
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
-  await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
   await homepageBarcelona.getTicketsAndMuseumDropDowm.click();
   await homepageBarcelona.getMenFootballDropDown.click();
 
@@ -50,7 +50,7 @@ test('check information about previous match', async ({ homepageBarcelona, resul
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
-  await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
   await homepageBarcelona.getFirstTeamDropDown.click();
   await homepageBarcelona.getResultsFromFirstTeamDropDown.click();
 
@@ -61,7 +61,7 @@ test('check information about players', async ({ homepageBarcelona, firstTeamPla
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
-  await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd() //Вимикаю рекламне вікно
   await homepageBarcelona.getFirstTeamDropDown.click();
   await homepageBarcelona.getPlayersFromFirstTeamDropDown.click();
 
@@ -73,7 +73,7 @@ test("check content in login page", async ({ homepageBarcelona, loginPage }) => 
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
-  await homepageBarcelona.closePopupAd(); //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd(); //Вимикаю рекламне вікно
   await homepageBarcelona.getLoginBtn.click()
 
   await expect(loginPage.getEmailInput).toBeVisible;
@@ -87,7 +87,7 @@ test("check content in kids page", async ({ homepageBarcelona, kidsPage }) => {
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
-  await homepageBarcelona.closePopupAd(); //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd(); //Вимикаю рекламне вікно
   await homepageBarcelona.getClubDropDown.click();
   await homepageBarcelona.getKidsFromClubDropDown.click();
 
@@ -99,7 +99,7 @@ test("check content in history page", async ({ homepageBarcelona, historyPage })
   await homepageBarcelona.goToFCB();
   await homepageBarcelona.clickToCookies();
 
-  await homepageBarcelona.closePopupAd(); //Вимикаю рекламне вікно
+//   await homepageBarcelona.closePopupAd(); //Вимикаю рекламне вікно
   await homepageBarcelona.getClubDropDown.click();
   await homepageBarcelona.getHistoryFromClubDropDown.click();
 
