@@ -22,7 +22,6 @@ type TestType = {
     page: Page;
 }
 
-
 export const test = baseTest.extend<TestType>({
     page: async ({ }, use, testInfo) => {
         let browser = await chromium.launch({headless:true})
