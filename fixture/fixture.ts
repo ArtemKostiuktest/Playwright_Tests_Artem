@@ -2,8 +2,8 @@
 import { test as baseTest, chromium, BrowserContext, type Page } from '@playwright/test';
 import { HomePageBatcelonaPage } from "../pages/barcelonaHomePage";
 import { SearchResultPage } from '../pages/searchResultPage';
-import { TicketsFootballPage } from '../pages/TicketsFootballPage';
-import { ResultAllMatchPage } from '../pages/ResultAllMatchPage';
+import { TicketsFootballPage } from '../pages/ticketsFootballPage';
+import { ResultAllMatchPage } from '../pages/resultAllMatchPage';
 import { FirstTeamPlayersPage } from '../pages/firstTeamPlayersPage';
 import { LoginPage } from '../pages/loginPage';
 import { KisdsPage } from '../pages/kidsPage';
