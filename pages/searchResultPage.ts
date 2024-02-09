@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 import { BasePage } from './basePage';
 
-export class SearchResult extends BasePage {
+export class SearchResultPage extends BasePage {
     readonly getResultListNews: Locator;
     readonly getFelterNewsButtons: Locator;
 

@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 import { BasePage } from './basePage';
 
-export class HomePageBatcelona extends BasePage {
+export class HomePageBatcelonaPage extends BasePage {
     readonly getFCBarcaLogo: Locator;
     readonly getLoginBtn: Locator;
     readonly getRegisterBtn: Locator;

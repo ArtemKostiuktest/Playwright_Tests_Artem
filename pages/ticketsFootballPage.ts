@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 import { BasePage } from './basePage';
 
-export class TicketsFootball extends BasePage {
+export class TicketsFootballPage extends BasePage {
     readonly getTimeUntilNextMatch: Locator;
     readonly getDateMatch: Locator;
 

@@ -1,7 +1,7 @@
 import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./basePage";
 
-export class Kisds extends BasePage {
+export class KisdsPage extends BasePage {
     readonly getTitle: Locator;
     readonly getAllContent: Locator;
 

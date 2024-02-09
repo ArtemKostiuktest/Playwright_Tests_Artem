@@ -1,7 +1,7 @@
 import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./basePage";
 
-export class Login extends BasePage {
+export class LoginPage extends BasePage {
     readonly getLoginByGoogle: Locator;
     readonly getLoginByFacebook: Locator;
     readonly getLoginByApple: Locator;

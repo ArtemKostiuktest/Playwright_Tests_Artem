@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 import { BasePage } from "./basePage";
 
-export class FirstTeamPlayers extends BasePage {
+export class FirstTeamPlayersPage extends BasePage {
     readonly getFilterByPosition: Locator;
     readonly getListPlayers: Locator;
 

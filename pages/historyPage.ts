@@ -1,7 +1,7 @@
 import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./basePage";
 
-export class History extends BasePage {
+export class HistoryPage extends BasePage {
     readonly getTitle: Locator;
     readonly getNavListOfHistory: Locator;
     readonly getAllHistoricalArticls: Locator;
